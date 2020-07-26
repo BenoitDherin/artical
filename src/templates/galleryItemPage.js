@@ -22,7 +22,7 @@ export default function GalleryItemPage( { data } ) {
       </Layout>
     )
   } else {
-    import(`../scripts/sketches/${node.parent.name}`).then(result => setSketch(result))
+    import(`../scripts/sketches/${node.parent.name}.js`).then(result => setSketch(result))
     return sketch ? <Layout><SketchWrapper sketch={sketch.default} /></Layout> : <Layout><div>Loading</div></Layout>
   }
 }
